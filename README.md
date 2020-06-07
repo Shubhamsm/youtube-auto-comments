@@ -4,6 +4,6 @@
 ### Install
 `pip3 install -r requirement.txt`
 
-run `auto comment.py`
+run `python3 autocomment.py`
 
 ### configure:
