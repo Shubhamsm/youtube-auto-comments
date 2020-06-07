@@ -1,9 +1,9 @@
 # youtube-auto-comments
 
 
-### Install
+### Install dependencies
 `pip3 install -r requirement.txt`
 
-run `python3 autocomment.py`
+run `python3 youtube.py`
 
 ### configure:
