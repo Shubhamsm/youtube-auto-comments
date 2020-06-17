@@ -6,32 +6,38 @@ import requests
 
 
 
-# def inputString:
-# time.sleep(10)
-# f=str(input("Term"))
-# f.replace(" ","+")
+
+
+Keywords=["Neural Networks","data Science"]         # keywords it search to get list of urls
+msg="hello"          # message to comment Can 
 
 
 
+def Links_list(keywords):
+    '''
+    give a list of urls which bot will comment on
+    '''
+    urls_list=[]        #urls list
+    page = requests.get("https://www.youtube.com/results?search_query=data+science+simplilearn")
+    soup = BeautifulSoup(page.content,'lxml', from_encoding="latin-1") 
 
-msg="hello BakchodGang"          # message to comment
+
+    # find all Video urls in YT search page  
+    vids = soup.findAll('a',attrs={'class':'yt-uix-tile-link'})
+    for x in vids:
+        y=x['href']
+        if y[0]=="/":
+            urls_list.append(y.encode('latin-1').decode('utf-8'))
+    return urls_list
 
 
-# to get all video links on searching 
-urls_list=[]
-page = requests.get("https://www.youtube.com/results?search_query=data+science+simplilearn")
-soup = BeautifulSoup(page.content,'lxml', from_encoding="latin-1") 
-
-
-vids = soup.findAll('a',attrs={'class':'yt-uix-tile-link'})
-for x in vids:
-    y=x['href']
-    if y[0]=="/":
-        urls_list.append(y.encode('latin-1').decode('utf-8'))
 
 
 
 def linkTo(*args):
+    '''
+    Iterating the urls provided by args and comment down 
+    '''
     count=0
     time.sleep(5)
     pyautogui.hotkey('ctrl', 'l')
@@ -55,10 +61,10 @@ def linkTo(*args):
         pyautogui.hotkey('ctrl','enter')
         
 
-        count+=1;
+        count+=1
         if count==3:
-            break;
+            break
         time.sleep(5)
 
 
-linkTo(*urls_list)
+linkTo(Links_list("hello"))
