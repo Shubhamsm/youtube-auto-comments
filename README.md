@@ -10,3 +10,9 @@ run `python3 youtube.py`
 
 ### configure:
 
+
+
+
+
+## other way  with selenium
+[readme:](https://github.com/Shubhamsm/youtube-auto-comments/blob/master/README.md)
