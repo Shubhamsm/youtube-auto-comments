@@ -15,4 +15,4 @@ run `python3 youtube.py`
 
 
 ## other way  with selenium
-[readme:](https://github.com/Shubhamsm/youtube-auto-comments/blob/master/README.md)
+[readme](https://github.com/Shubhamsm/youtube-auto-comments/blob/master/2nd-way.md)
